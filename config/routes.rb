@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "/sodas" => "sodas#index"
   get "/sodas/new" => "sodas#new"  
+  post "/sodas" => "sodas#create"
   get "/sodas/:id" => "sodas#show"
 
 end

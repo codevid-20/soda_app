@@ -12,4 +12,15 @@ class SodasController < ApplicationController
   def new    
     render 'new.html.erb'
   end
+
+  def create
+    @soda = Soda.new(
+      name: params[:name], 
+      size: params[:size], 
+      image_url: params[:image_url],
+    )
+
+    @soda.save
+    redirect_to "/sodas/#{@soda.id}"
+  end
 end
