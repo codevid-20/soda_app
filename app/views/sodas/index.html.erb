@@ -1,0 +1,8 @@
+<p>hello i am in the index action</p>
+
+<% @sodas.each do |soda| %>
+  <p><b>id:</b> <%= soda.id %></p>
+  <p><b>name:</b> <%= soda.name %></p>
+  <p><b>size:</b> <%= soda.size %></p>
+  <hr>
+<% end %>
