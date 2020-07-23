@@ -11,3 +11,10 @@
   <p>image_url: <input type="text" name="image_url" value="<%= @soda.image_url %>"></p>
   <p><input type="submit" value="update this recipe"></p>
 </form>
+
+
+
+<form action="/sodas/<%= @soda.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete this soda">
+</form>

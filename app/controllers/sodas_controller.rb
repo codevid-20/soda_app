@@ -38,4 +38,13 @@ class SodasController < ApplicationController
 
     redirect_to "/sodas"
   end
+
+  def destroy
+    # find the soda
+    @soda = Soda.find_by(id: params[:id])
+    # delete the soda
+    @soda.destroy
+    # go to...?
+    redirect_to "/sodas"
+  end
 end
