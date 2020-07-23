@@ -23,4 +23,9 @@ class SodasController < ApplicationController
     @soda.save
     redirect_to "/sodas/#{@soda.id}"
   end
+
+  def edit
+    @soda = Soda.find_by(id: params[:id])
+    render 'edit.html.erb'
+  end
 end
