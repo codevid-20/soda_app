@@ -3,10 +3,9 @@
 // goes to a different url
 // needs default values
 
-<%= @soda.name %>
 
-
-<form action="" method="">
+<form action="/sodas/<%= @soda.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
   <p>name: <input type="text" name="name" value="<%= @soda.name %>"></p>
   <p>size: <input type="text" name="size" value="<%= @soda.size %>"></p>
   <p>image_url: <input type="text" name="image_url" value="<%= @soda.image_url %>"></p>

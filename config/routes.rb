@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   post "/sodas" => "sodas#create"
   get "/sodas/:id" => "sodas#show"
   get "/sodas/:id/edit" => "sodas#edit"
+  patch "/sodas/:id" => "sodas#update"
 
 end

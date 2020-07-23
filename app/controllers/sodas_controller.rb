@@ -28,4 +28,14 @@ class SodasController < ApplicationController
     @soda = Soda.find_by(id: params[:id])
     render 'edit.html.erb'
   end
+
+  def update
+    @soda = Soda.find_by(id: params[:id])
+    @soda.name = params[:name]
+    @soda.size = params[:size]
+    @soda.image_url = params[:image_url]
+    @soda.save
+
+    redirect_to "/sodas"
+  end
 end
